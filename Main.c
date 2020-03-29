@@ -50,7 +50,7 @@ int main() {
 
 	Asignatura mate;
 
-	mate.Codigo = 00;
+	mate.Codigo = 01;
 	mate.carrera = "general";
 	mate.creditos = 6;
 	mate.curso = 1;
