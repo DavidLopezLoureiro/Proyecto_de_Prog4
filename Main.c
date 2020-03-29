@@ -12,7 +12,7 @@
 #define MAX_LINE 10
 
 
-
+/*
 void clearIfNeeded(char *str, int max_line)
 	{
 		// Limpia los caracteres de m·s introducidos
@@ -34,18 +34,25 @@ void clearIfNeeded(char *str, int max_line)
 		return * linea;
 }
 
-
+*/
 
 int main() {
 
 	printf("1. Introducir asignatura en aula \n");
-
 
 	Profesor felipe;
 
 	felipe.nombre = "Felipe";
 	felipe.DNI = "234212";
 
+	Asignatura vacia;
+
+	vacia.Codigo = 00;
+	vacia.carrera = "general";
+	vacia.creditos = 0;
+	vacia.curso = 0;
+	vacia.nombre = "vacia";
+	vacia.profe = felipe;
 
 
 	Asignatura mate;
@@ -63,6 +70,22 @@ int main() {
 
 	aula1.codigo = "01";
 	aula1.ocupadapor[0][0] = mate;
+
+
+	Asignatura lista[5][6];
+
+		for(int i = 0; i < 5; i++){
+			for(int u = 0; u < 6; u++){
+
+			aula1.ocupadapor[i][u]= vacia;
+
+
+			}
+		}
+
+	aula1 = reserva(aula1, 1, 0, mate);
+
+	printf("%i",aula1.ocupadapor[1][0].curso);
 
 	return 0;
 

@@ -8,15 +8,21 @@
 
 #include "Aula.h"
 #include "Asignatura.h"
-void reserva (Asignatura *puntero[5][6], int dia, int hora, Asignatura asig){
+
+Aula reserva (Aula aula, int dia, int hora, Asignatura asig){
 
 
-	if(puntero[dia][hora]==NULL){
-	*puntero[dia][hora]=asig;
+	if(aula.ocupadapor[dia][hora].creditos == 0){
+
+		aula.ocupadapor[dia][hora] = asig;
+
+	}else{
+
+		printf("Ocupada.");
 	}
-	else{
-	printf("Ocupada.");
-	}
+
+
+	return aula;
 }
 
 
