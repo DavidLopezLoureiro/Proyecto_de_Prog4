@@ -7,3 +7,13 @@
 
 
 #include "Asignatura.h"
+
+
+
+Asignatura matricular(Asignatura asig, Alumno alum, int cant){
+
+		asig.alumnos[cant] = alum;
+
+		return asig;
+
+}

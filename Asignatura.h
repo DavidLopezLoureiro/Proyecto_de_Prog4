@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Profesor.h"
+#include "Alumno.h"
 
 
 typedef struct{
@@ -23,8 +24,11 @@ typedef struct{
 	char carrera;
 	int curso;
 	Profesor profe;
+	Alumno alumnos[30];
 
 }Asignatura;
+
+Asignatura matricular(Asignatura asig, Alumno alum, int cant);
 
 
 #endif /* ASIGNATURA_H_ */

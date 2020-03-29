@@ -72,8 +72,6 @@ int main() {
 	aula1.ocupadapor[0][0] = mate;
 
 
-	Asignatura lista[5][6];
-
 		for(int i = 0; i < 5; i++){
 			for(int u = 0; u < 6; u++){
 
@@ -83,9 +81,10 @@ int main() {
 			}
 		}
 
+	//FUNCION DE RESERVA DE AULAS
 	aula1 = reserva(aula1, 1, 0, mate);
 
-	printf("%i",aula1.ocupadapor[1][0].curso);
+	printf("%i",aula1.ocupadapor[1][0].creditos);
 
 	return 0;
 
