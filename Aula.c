@@ -15,7 +15,7 @@ void reserva (Asignatura *puntero[5][6], int dia, int hora, Asignatura asig){
 	*puntero[dia][hora]=asig;
 	}
 	else{
-	printf("Ocupada");
+	printf("Ocupada.");
 	}
 }
 
