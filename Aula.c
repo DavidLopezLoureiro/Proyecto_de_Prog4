@@ -25,4 +25,19 @@ Aula reserva (Aula aula, int dia, int hora, Asignatura asig){
 	return aula;
 }
 
+Aula quitaReserva(Aula aula, int dia, int hora, Asignatura asig){
+
+	if(aula.ocupadapor[dia][hora].creditos != 0){
+
+			aula.ocupadapor[dia][hora] = asig;
+
+		}else{
+
+			printf("Esta libre.");
+		}
+
+
+		return aula;
+
+}
 
