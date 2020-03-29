@@ -10,6 +10,9 @@
 #define MAX_LINE 10
 
 /*
+ *
+ EN PROCESO DE CREACION
+
  void clearIfNeeded(char *str, int max_line)
  {
  // Limpia los caracteres de mÂ·s introducidos
@@ -33,6 +36,9 @@
  */
 
 int main() {
+
+
+	//Dado que este proyecto requiere en gran parte la creacion de objetos de C++ para poder añadir aulas, alumnos, asignaturas y demas lo que hemos desarrollado en esta entrega son las funciones basicas que nos permiten matricular alumnos y reservar y quitar reservas. Para probarlas existen unos datos de prueba y con solo ejecutar se muestran los resultados de estas funciones.
 
 	//SE USA PARA RELLENAR EL ARRAY DE ELEMENTOS VACIOS
 	Alumno vacio;
