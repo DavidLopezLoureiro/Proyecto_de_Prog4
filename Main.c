@@ -159,8 +159,12 @@ int main() {
 
 	//MENÚ
 
-	printf("Elije una opción:");
-
+	printf("\nElije una opción: \n \n");
+	printf("1. Visualizar horario \n");
+	printf("2. Reservar \n");
+	printf("3. Quitar reserva \n");
+	printf("4. Matricular alumno \n");
+	printf("5. Salir \n");
 
 	return 0;
 
