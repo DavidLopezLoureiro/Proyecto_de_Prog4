@@ -159,12 +159,49 @@ int main() {
 
 	//MENÚ
 
-	printf("\nElije una opción: \n \n");
-	printf("1. Visualizar horario \n");
-	printf("2. Reservar \n");
-	printf("3. Quitar reserva \n");
-	printf("4. Matricular alumno \n");
-	printf("5. Salir \n");
+	int opcion = 0;
+
+
+	do {
+		printf("\nElije una opción: \n \n");
+		printf("1. Visualizar horario \n");
+		printf("2. Reservar \n");
+		printf("3. Quitar reserva \n");
+		printf("4. Matricular alumno \n");
+		printf("5. Salir \n");
+		fflush( stdin );
+		scanf("%d", &opcion);
+
+
+		//Leer
+		switch(opcion) {
+			case 1:
+				printf("Has seleccionado %i \n", opcion);
+			break; //Visualizar horario
+
+			case 2:
+				printf("Has seleccionado %i \n", opcion);
+			break; //Reservar
+
+			case 3:
+				printf("Has seleccionado %i \n", opcion);
+			break; //Quitar reserva
+
+			case 4:
+				printf("Has seleccionado %i \n", opcion);
+			break; //Matricular alumno
+
+			case 5:
+			break; //Salir
+
+			default:
+				printf("Opción incorrecta");
+			break;
+
+		}
+
+
+	} while( opcion != 5);
 
 	return 0;
 
