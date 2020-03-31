@@ -102,99 +102,69 @@ int main() {
 
 	//Los ceros son para marcar que no hay nada en esa posicion. Si sale algo que no sea un 0 quiere decir que hay un elemento.
 
-	printf("Sin reservas: \n");
+	//printf("Sin reservas: \n");
 
 	for (int i = 0; i < 6; i++) {
 
-		printf("\n");
+		//printf("\n");
 		for (int u = 0; u < 5; u++) {
 
-			printf(" %i  ", aula1.ocupadapor[u][i].creditos);
+			//printf(" %i  ", aula1.ocupadapor[u][i].creditos);
 
 		}
 	}
-	printf("\n \n");
+	//printf("\n \n");
 
 	//FUNCION DE RESERVA DE AULAS
 	aula1 = reserva(aula1, 1, 0, mate);
-	printf("Tras realizar la reserva: \n");
+	//printf("Tras realizar la reserva: \n");
 
 	for (int i = 0; i < 6; i++) {
 
-		printf("\n");
+		//printf("\n");
 		for (int u = 0; u < 5; u++) {
 
-			printf(" %i  ", aula1.ocupadapor[u][i].creditos);
+			//printf(" %i  ", aula1.ocupadapor[u][i].creditos);
 
 		}
 	}
 
-	printf("\n \n");
-	printf("Para mostrar que no permite realizar reservas encima de reservas: ");
+	//printf("\n \n");
+	//printf("Para mostrar que no permite realizar reservas encima de reservas: ");
 	aula1 = reserva(aula1, 1, 0, mate);
-	printf("\n \n");
+	//printf("\n \n");
 	//FUNCION DE QUITADO DE RESERVA DE AULAS
 	aula1 = quitaReserva(aula1, 1, 0, vacia);
 
-	printf("Tras quitar la reserva: \n");
+	//printf("Tras quitar la reserva: \n");
 
 	for (int i = 0; i < 6; i++) {
 
-		printf("\n");
+		//printf("\n");
 		for (int u = 0; u < 5; u++) {
 
-			printf(" %i  ", aula1.ocupadapor[u][i].creditos);
+			//printf(" %i  ", aula1.ocupadapor[u][i].creditos);
 
 		}
 	}
 
-	printf("\n \n");
+	//printf("\n \n");
 
-	printf("Sin alumnos matriculado en mate: %i \n", mate.alumnos[0].curso);
+	//printf("Sin alumnos matriculado en mate: %i \n", mate.alumnos[0].curso);
 
 	//FUNCION PARA MATRICULAR
 	mate = matricular(mate, John, 0);
-	printf("Con un alumno matriculado en mate: %i \n", mate.alumnos[0].curso);
-
-	return 0;
+	//printf("Con un alumno matriculado en mate: %i \n", mate.alumnos[0].curso);
 
 
 	//MENÚ
 
-	int n, opcion;
+	printf("Elije una opción:");
 
-	    do
-	    {
-	        printf( "\n   1. Calcular el doble de un n%cmero entero.", 163 );
-	        printf( "\n   2. Calcular la mitad de un n%cmero entero.", 163 );
-	        printf( "\n   3. Calcular el cuadrado de un n%cmero entero.", 163 );
-	        printf( "\n   4. Salir." );
-	        printf( "\n\n   Introduzca opci%cn (1-4): ", 162 );
 
-	        scanf( "%d", &opcion );
+	return 0;
 
-	        /* Inicio del anidamiento */
 
-	        switch ( opcion )
-	        {
-	            case 1: printf( "\n   Introduzca un n%cmero entero: ", 163 );
-	                    scanf( "%d", &n );
-	                    printf( "\n   El doble de %d es %d\n\n", n, n * 2 );
-	                    break;
-
-	            case 2: printf( "\n   Introduzca un n%cmero entero: ", 163 );
-	                    scanf( "%d", &n );
-	                    printf( "\n   La mitad de %d es %f\n\n", n, ( float ) n / 2 );
-	                    break;
-
-	            case 3: printf( "\n   Introduzca un n%cmero entero: ", 163 );
-	                    scanf( "%d", &n );
-	                    printf( "\n   El cuadrado de %d es %d\n\n", n, ( int ) pow( n, 2 ) );
-	         }
-
-	         /* Fin del anidamiento */
-
-	    } while ( opcion != 4 );
 
 }
 
