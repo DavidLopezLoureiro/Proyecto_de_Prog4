@@ -13,6 +13,8 @@
  *
  EN PROCESO DE CREACION
 
+//Commit de prueba
+
  void clearIfNeeded(char *str, int max_line)
  {
  // Limpia los caracteres de m·s introducidos
@@ -154,6 +156,8 @@ int main() {
 	printf("Con un alumno matriculado en mate: %i \n", mate.alumnos[0].curso);
 
 	return 0;
+
+
 
 }
 
