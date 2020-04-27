@@ -14,8 +14,9 @@
 
 typedef struct{
 
-	char DNI;
-	char nombre;
+	char DNI[9];
+	char *nombre;
+
 
 }Profesor;
 
