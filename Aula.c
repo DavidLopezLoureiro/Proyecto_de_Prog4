@@ -9,12 +9,12 @@
 #include "Aula.h"
 #include "Asignatura.h"
 
-Aula reserva (Aula aula, int dia, int hora, Asignatura asig){
+void reserva (Aula *aula, int dia, int hora, Asignatura asig){
 
 
-	if(aula.ocupadapor[dia][hora].creditos == 0){
+	if(aula->ocupadapor[dia][hora].creditos == 0){
 
-		aula.ocupadapor[dia][hora] = asig;
+		aula->ocupadapor[dia][hora] = asig;
 
 	}else{
 
@@ -22,14 +22,13 @@ Aula reserva (Aula aula, int dia, int hora, Asignatura asig){
 	}
 
 
-	return aula;
 }
 
-Aula quitaReserva(Aula aula, int dia, int hora, Asignatura asig){
+void quitaReserva(Aula *aula, int dia, int hora, Asignatura asig){
 
-	if(aula.ocupadapor[dia][hora].creditos != 0){
+	if(aula->ocupadapor[dia][hora].creditos != 0){
 
-			aula.ocupadapor[dia][hora] = asig;
+			aula->ocupadapor[dia][hora] = asig;
 
 		}else{
 
@@ -37,7 +36,6 @@ Aula quitaReserva(Aula aula, int dia, int hora, Asignatura asig){
 		}
 
 
-		return aula;
 
 }
 
