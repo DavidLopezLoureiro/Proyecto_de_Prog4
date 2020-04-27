@@ -13,19 +13,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 typedef struct{
 
-	char codigo;
+	char codigo[2];
 	int tamanyoMax;
 	Asignatura ocupadapor[5][6];
 
 }Aula;
 
-Aula reserva (Aula aula, int dia, int hora, Asignatura asig);
-Aula quitaReserva(Aula aula, int dia, int hora, Asignatura asig);
+void reserva (Aula *aula, int dia, int hora, Asignatura asig);
+void quitaReserva(Aula* aula, int dia, int hora, Asignatura asig);
 
-// Método de visualización de horarios C++
-// Método de visualizacíon de reservas C++
-// Método de visualización de clasesLibres C++
+
+// MÃ©todo de visualizaciÃ³n de horarios C++
+// MÃ©todo de visualizacÃ­on de reservas C++
+// MÃ©todo de visualizaciÃ³n de clasesLibres C++
 
 #endif /* AULA_H_ */
