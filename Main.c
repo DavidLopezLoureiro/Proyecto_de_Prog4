@@ -192,6 +192,8 @@ int main() {
 
 	aula1.ocupadapor[0][0] = mate;
 
+
+
 	//RELLENA LOS ARRAYS DE ELEMENTOS VACIOS
 	for (int i = 0; i < 5; i++) {
 		for (int u = 0; u < 6; u++) {
@@ -200,6 +202,8 @@ int main() {
 
 		}
 	}
+
+	mate.alumnos = malloc(sizeof(Alumno)*30);
 
 	for (int y = 0; y < 30; y++) {
 
@@ -264,7 +268,7 @@ int main() {
 	//FUNCION PARA MATRICULAR
 	matricular(&mate, John, 0);
 	printf("Con un alumno matriculado en mate: %i \n", mate.alumnos[0].curso);
-
+/*
 	//MENÚ
 	int opcion = 0;
 
@@ -306,7 +310,7 @@ int main() {
 		}
 
 	} while (opcion != 5);
-
+*/
 	free(vacio.carrera);
 	free(vacio.nombre);
 	free(John.carrera);
@@ -316,6 +320,8 @@ int main() {
 	free(vacia.nombre);
 	free(mate.carrera);
 	free(mate.nombre);
+
+
 	return 0;
 
 }
