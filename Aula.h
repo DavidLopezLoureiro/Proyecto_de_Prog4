@@ -16,7 +16,7 @@
 
 typedef struct{
 
-	char codigo[2];
+	char codigo[3];
 	int tamanyoMax;
 	Asignatura ocupadapor[5][6];
 

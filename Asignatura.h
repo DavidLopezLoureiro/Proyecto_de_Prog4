@@ -19,12 +19,12 @@
 
 typedef struct{
 
-	char Codigo[2];
+	char Codigo[3];
 	char *nombre;
 	int creditos;
 	char *carrera;
 	int curso;
-	Profesor profe;
+	Profesor *profe;
 	Alumno *alumnos;
 
 }Asignatura;
