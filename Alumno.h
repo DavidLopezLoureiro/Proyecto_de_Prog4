@@ -14,10 +14,11 @@
 
 typedef struct{
 
-	char DNI;
-	char nombre;
-	char carrera;
+	char DNI[9];
+	char *nombre;
+	char *carrera;
 	int curso;
+
 
 }Alumno;
 
