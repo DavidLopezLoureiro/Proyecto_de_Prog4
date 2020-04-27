@@ -10,10 +10,8 @@
 
 
 
-Asignatura matricular(Asignatura asig, Alumno alum, int cant){
+void matricular(Asignatura *asig, Alumno alum, int cant){
 
-		asig.alumnos[cant] = alum;
-
-		return asig;
+		asig->alumnos[cant] = alum;
 
 }
