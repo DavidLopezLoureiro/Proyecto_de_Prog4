@@ -18,7 +18,7 @@
 
  void clearIfNeeded(char *str, int max_line)
  {
- // Limpia los caracteres de mÂ·s introducidos
+ // Limpia los caracteres de mÃ‚Â·s introducidos
  if ((strlen(str) == max_line-1) && (str[max_line-2] != '\n'))
  while (getchar() != '\n');
  }
@@ -41,48 +41,108 @@
 int main() {
 
 
-	//Dado que este proyecto requiere en gran parte la creacion de objetos de C++ para poder añadir aulas, alumnos, asignaturas y demas lo que hemos desarrollado en esta entrega son las funciones basicas que nos permiten matricular alumnos y reservar y quitar reservas. Para probarlas existen unos datos de prueba y con solo ejecutar se muestran los resultados de estas funciones.
+	//Dado que este proyecto requiere en gran parte la creacion de objetos de C++ para poder aÃ±adir aulas, alumnos, asignaturas y demas lo que hemos desarrollado en esta entrega son las funciones basicas que nos permiten matricular alumnos y reservar y quitar reservas. Para probarlas existen unos datos de prueba y con solo ejecutar se muestran los resultados de estas funciones.
 
 	//SE USA PARA RELLENAR EL ARRAY DE ELEMENTOS VACIOS
 	Alumno vacio;
-	vacio.DNI = "0";
+	vacio.DNI[0] = '0';
 	vacio.curso = 0;
 	vacio.carrera = "0";
 	vacio.nombre = "0";
 
 	//ALUMNO A MATRICULAR
 	Alumno John;
-	John.DNI = "34876";
+
+	John.DNI[0] = '0';
+	John.DNI[1] = '1';
+	John.DNI[2] = '2';
+	John.DNI[3] = '3';
+	John.DNI[4] = '4';
+	John.DNI[5] = '5';
+	John.DNI[6] = '6';
+	John.DNI[7] = '7';
+	John.DNI[8] = '8';
+
 	John.curso = 1;
-	John.carrera = "ADE";
-	John.nombre = "MIKEL";
+
+	John.carrera[0]='A';
+	John.carrera[1]='D';
+	John.carrera[2]='E';
+	John.carrera[3]='\0';
+
+	John.nombre[0] = 'J';
+	John.nombre[1] = 'H';
+	John.nombre[2] = 'O';
+	John.nombre[3] = 'N';
+	John.nombre[4] = '\0';
 
 	//PROFESOR PARA LA ASIGNATURA
 	Profesor felipe;
-	felipe.nombre = "Felipe";
-	felipe.DNI = "234212";
+
+	felipe.nombre[0] = 'f';
+	felipe.nombre[1] = 'e';
+	felipe.nombre[2] = 'l';
+	felipe.nombre[3] = 'i';
+	felipe.nombre[4] = 'p';
+	felipe.nombre[5] = 'e';
+	felipe.nombre[6] = '\0';
+
+	felipe.DNI[0] = '3';
+	felipe.DNI[1] = '5';
+	felipe.DNI[2] = '9';
+	felipe.DNI[3] = '1';
+	felipe.DNI[4] = '2';
+	felipe.DNI[5] = '2';
+	felipe.DNI[6] = '3';
+	felipe.DNI[7] = '7';
+	felipe.DNI[8] = 'k';
 
 	//SE USA PARA RELLENAR EL ARRAY DE ELEMENTOS VACIOS
 	Asignatura vacia;
-	vacia.Codigo = 00;
+	vacia.Codigo[0] = '0';
+	vacia.Codigo[1] = '0';
+
 	vacia.carrera = "general";
+
 	vacia.creditos = 0;
 	vacia.curso = 0;
-	vacia.nombre = "vacia";
+
+	vacia.nombre[0] = 'v';
+	vacia.nombre[1] = 'a';
+	vacia.nombre[2] = 'c';
+	vacia.nombre[3] = 'i';
+	vacia.nombre[4] = 'a';
+	vacia.nombre[5] = '\0';
+
 	vacia.profe = felipe;
 
 	//ASIGNATURA
 	Asignatura mate;
-	mate.Codigo = 01;
-	mate.carrera = "general";
+	mate.Codigo[0] = '0';
+	mate.Codigo[1] = '1';
+
+	mate.carrera[0] = 'i';
+	mate.carrera[0] = 'n';
+	mate.carrera[0] = 'f';
+	mate.carrera[0] = 'o';
+	mate.carrera[0] = 'r';
+	mate.carrera[0] = '\0';
+
 	mate.creditos = 6;
 	mate.curso = 1;
-	mate.nombre = "mate";
+
+	mate.nombre[0] = 'm';
+	mate.nombre[1] = 'a';
+	mate.nombre[2] = 't';
+	mate.nombre[3] = 'e';
+	mate.nombre[4] = '\0';
+
 	mate.profe = felipe;
 
 	//AULA
 	Aula aula1;
-	aula1.codigo = "01";
+	aula1.codigo[0] = '0';
+	aula1.codigo[1] = '1';
 	aula1.ocupadapor[0][0] = mate;
 
 	//RELLENA LOS ARRAYS DE ELEMENTOS VACIOS
@@ -116,7 +176,7 @@ int main() {
 	//printf("\n \n");
 
 	//FUNCION DE RESERVA DE AULAS
-	aula1 = reserva(aula1, 1, 0, mate);
+	reserva(&aula1, 1, 0, mate);
 	//printf("Tras realizar la reserva: \n");
 
 	for (int i = 0; i < 6; i++) {
@@ -131,10 +191,11 @@ int main() {
 
 	//printf("\n \n");
 	//printf("Para mostrar que no permite realizar reservas encima de reservas: ");
-	aula1 = reserva(aula1, 1, 0, mate);
+	reserva(&aula1, 1, 0, mate);
 	//printf("\n \n");
+
 	//FUNCION DE QUITADO DE RESERVA DE AULAS
-	aula1 = quitaReserva(aula1, 1, 0, vacia);
+	quitaReserva(&aula1, 1, 0, vacia);
 
 	//printf("Tras quitar la reserva: \n");
 
@@ -153,17 +214,16 @@ int main() {
 	//printf("Sin alumnos matriculado en mate: %i \n", mate.alumnos[0].curso);
 
 	//FUNCION PARA MATRICULAR
-	mate = matricular(mate, John, 0);
+	matricular(&mate, John, 0);
 	//printf("Con un alumno matriculado en mate: %i \n", mate.alumnos[0].curso);
 
-
-	//MENÚ
+	//MENÃš
 
 	int opcion = 0;
 
 
 	do {
-		printf("\nElije una opción: \n \n");
+		printf("\nElije una opciÃ³n: \n \n");
 		printf("1. Visualizar horario \n");
 		printf("2. Reservar \n");
 		printf("3. Quitar reserva \n");
@@ -195,7 +255,7 @@ int main() {
 			break; //Salir
 
 			default:
-				printf("Opción incorrecta");
+				printf("OpciÃ³n incorrecta");
 			break;
 
 		}
