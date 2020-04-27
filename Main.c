@@ -46,9 +46,26 @@ int main() {
 	//SE USA PARA RELLENAR EL ARRAY DE ELEMENTOS VACIOS
 	Alumno vacio;
 	vacio.DNI[0] = '0';
+	vacio.DNI[1] = '0';
+	vacio.DNI[2] = '0';
+	vacio.DNI[3] = '0';
+	vacio.DNI[4] = '0';
+	vacio.DNI[5] = '0';
+	vacio.DNI[6] = '0';
+	vacio.DNI[7] = '0';
+	vacio.DNI[8] = '0';
+
 	vacio.curso = 0;
-	vacio.carrera = "0";
-	vacio.nombre = "0";
+
+	vacio.carrera[0] = 'n';
+	vacio.carrera[1] = '\0';
+
+	vacio.nombre[0] = 'v';
+	vacio.nombre[1] = 'a';
+	vacio.nombre[2] = 'c';
+	vacio.nombre[3] = 'i';
+	vacio.nombre[4] = 'o';
+	vacio.nombre[5] = '\0';
 
 	//ALUMNO A MATRICULAR
 	Alumno John;
